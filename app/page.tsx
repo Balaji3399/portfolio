@@ -1,10 +1,12 @@
+import Navbar from '@/components/Navbar';
 import Hero from '../components/Hero'
 export default function Home() {
   return (
     
     <>
-    <main className="relative bg-black-100 flex justify-center items-center mx-auto h-screen">
-      <div className="font-bold">
+    <Navbar />
+    <main className="relative bg-black-100 flex justify-center items-center  h-screen  mx-auto overflow-hidden">
+      <div className="">
         <Hero />
       </div>
     </main>

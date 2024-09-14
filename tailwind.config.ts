@@ -3,7 +3,7 @@ import type { Config } from "tailwindcss";
 // const svgToTinyDataUri = require("mini-svg-data-uri");
 import svgToTinyDataUri from "mini-svg-data-uri";
 
-const colors = require("tailwindcss/colors");
+// const colors = require("tailwindcss/colors");
 import { colors } from 'tailwindcss/colors'
 
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette"
@@ -94,11 +94,15 @@ const config = {
         spotlight: {
           "0%": {
             opacity: "0",
-            transform: "translate(-72%, -62%) scale(0.5)",
+            transform: "translate(-72%, -40%) scale(0.5)",
           },
-          "66%": {
-            opacity: "0.5",
-            transform: "translate(-60%,-40%) scale(1)",
+          "35%": {
+            opacity: "0.4",
+            transform: "translate(-50%,-40%) scale(0.8)",
+          },
+          "65%" :{
+            opacity : "0.8" ,
+            transform: "translate(-50%,-40%) scale(1)",
           },
           "100%": {
             opacity: "1",
@@ -156,7 +160,7 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        spotlight: "spotlight 2s ease 2s 1 forwards",
+        spotlight: "spotlight 3s ease-in-out 2s 1 forwards",
         shimmer: "shimmer 2s linear infinite",
         first: "moveVertical 30s ease infinite",
         second: "moveInCircle 20s reverse infinite",
@@ -168,7 +172,7 @@ const config = {
       },
     },
   },
-  plugins: [
+  plugins: [addVariablesForColors ,
     require("tailwindcss-animate"),
     addVariablesForColors,
     function ({ matchUtilities, theme }: any) {
