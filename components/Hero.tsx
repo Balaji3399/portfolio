@@ -15,9 +15,9 @@ const Hero = () => {
         <div className="h-screen w-full dark:bg-black-100 bg-white  pt-20 text-center  absolute top-0 left-0">
           {/* Radial gradient for the container to give a faded look */}
           {/* <div className="absolute pointer-events-none inset-0  dark:bg-black-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div> */}
-            <div className="w-full -top-16 flex justify-center text-4xl sm:text-5xl font-bold italic relative z-20 bg-clip-text text-transparent hover:bg-gradient-to-b from-purple to-red-400 py-8">
+            <div className="w-full flex justify-center text-4xl sm:text-5xl font-bold italic relative z-20 bg-clip-text text-transparent hover:bg-gradient-to-b from-purple to-red-400 py-8">
             <TextRevealCard revealText='Coding the Future of Digital Experiences' 
-                            className='bg-transparent  border-none text-start w-3/4' 
+                            className='-top-12 bg-transparent  border-none text-start w-3/4' 
                             text='Coding the Future of Digital Experiences'>
             </TextRevealCard>
             </div>
