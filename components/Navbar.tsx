@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
-import { Button } from './ui/button';
+// import { Button } from './ui/button';
 // import { IoLogOutOutline } from "react-icons/io5";
 
 const Navbar = () => {
