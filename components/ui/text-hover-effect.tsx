@@ -61,7 +61,7 @@ export const TextHoverEffect = ({
         <motion.radialGradient
           id="revealMask"
           gradientUnits="userSpaceOnUse"
-          r="20%"
+          r="30%"
           animate={maskPosition}
           transition={{ duration: duration ?? 0, ease: "easeOut" }}
 
@@ -92,8 +92,8 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-7xl  "
-        style={{ opacity: hovered ? 0.7 : 0 }}
+        className="font-[Helvetica] italic font-bold  fill-transparent text-4xl  "
+        style={{ opacity: hovered ? 0.8 : 0 }}
       >
         {text}
       </text>
@@ -103,7 +103,7 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.3"
-        className="font-[helvetica] font-bold fill-transparent text-7xl   stroke-neutral-200 dark:stroke-neutral-800"
+        className="font-[Helvetica] italic font-bold fill-transparent text-4xl   "
         initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
         animate={{
           strokeDashoffset: 0,
@@ -124,7 +124,7 @@ export const TextHoverEffect = ({
         stroke="url(#textGradient)"
         strokeWidth="0.3"
         mask="url(#textMask)"
-        className="font-[helvetica] font-bold fill-transparent text-7xl  "
+        className="font-[Helvetica] italic font-bold fill-transparent text-4xl bg-black-200 "
       >
         {text}
       </text>

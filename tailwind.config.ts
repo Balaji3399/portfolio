@@ -94,19 +94,19 @@ const config = {
         spotlight: {
           "0%": {
             opacity: "0",
-            transform: "translate(-72%, -40%) scale(0.5)",
+            transform: "translate(-72%, -40%) scale(0.8)",
           },
           "35%": {
             opacity: "0.4",
-            transform: "translate(-50%,-40%) scale(0.8)",
+            transform: "translate(-50%,-40%) scale(1)",
           },
           "65%" :{
             opacity : "0.8" ,
-            transform: "translate(-50%,-40%) scale(1)",
+            transform: "translate(-50%,-40%) scale(1.2)",
           },
           "100%": {
             opacity: "1",
-            transform: "translate(-50%,-40%) scale(1)",
+            transform: "translate(-50%,-40%) scale(1.4)",
           },
           
         },

@@ -12,8 +12,10 @@ const Navbar = () => {
   // Effect to change navbar background on scroll
   useEffect(() => {
     const handleScroll = () => {
+      console.log(window.scrollY)
       if (window.scrollY > 50) {
         setIsScrolled(true);
+        console.log()
       } else {
         setIsScrolled(false);
       }
@@ -27,12 +29,12 @@ const Navbar = () => {
   }, []);
 
   return (
-    <header className={`text-white-100 p-5  fixed w-full z-10 ${isScrolled || isMenuOpen? ' shadow-md ': 'bg-transparent '}`}>
+    <header className={`text-white-100 p-5  fixed w-full z-10 ${isScrolled || isMenuOpen? ' bg-transparent backdrop-blur-md shadow-lg z-50': 'bg-transparent '}`}>
       <div className="container mx-auto flex justify-between items-center">
         {/* <img src="/logo.svg" className="text-2xl font-bold" /> */}
         <h1 className='text-purple font-extrabold text-2xl'>@AB.</h1>
         <nav className="hidden md:flex space-x-6 ">
-          <a href="/home" className="font-bold hover:text-purple">Home</a>
+          <a href="/home" className="navlist font-bold hover:text-purple">Home</a>
           <a href="/howItWorks" className="font-bold hover:text-purple">How it Works</a>
           <a href="/testimonials" className="font-bold hover:text-purple">Testimonials</a>
           <a href="#" className="font-bold hover:text-purple">Contact</a>
@@ -50,9 +52,9 @@ const Navbar = () => {
         <motion.nav 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex flex-col space-y-2 mt-4 md:hidden"
+          className="navlist flex flex-col space-y-2 mt-4 md:hidden"
         >
-          <a href="/home" className="  hover:text-purple">Home</a>
+          <a href="/home" className="active  hover:text-purple">Home</a>
           <a href="/howItWorks" className=" hover:text-purple">How it Works</a>
           <a href="/testimonials" className=" hover:text-purple">Testimonials</a>
           <a href="#" className=" hover:text-purple">Contact</a>
