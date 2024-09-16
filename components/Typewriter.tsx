@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react';
-
-const Typewriter = ({ texts, typingSpeed = 100, delay = 1000 }) => {
+interface TypeWriterProps {
+  texts : string[] ;
+  typingSpeed?:number ;
+  delay?:number ;
+}
+const Typewriter : React.FC<TypeWriterProps> = ({ texts, typingSpeed = 100, delay = 1000 }) => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
