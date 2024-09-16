@@ -10,7 +10,7 @@ const StartBackground = () => {
     const [sphere] = useState(() => Random.inSphere(new Float32Array(2500) , {radius: 1.2}));
 
     useFrame((state , delta) => {
-        ref.current.rotation.x -= delta/10 ;
+        ref.current.rotation.x -= delta/20 ;
         ref.current.rotation.y -= delta/15 ;
     })
   return (
@@ -24,7 +24,7 @@ const StartBackground = () => {
         >
             <PointMaterial
              transparent
-             color = "$fff"
+             color = {`${'#ccacf8'}`}
              size={0.0028}
              sizeAttenuation={true}
              dethWrite={false}

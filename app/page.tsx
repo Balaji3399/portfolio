@@ -13,7 +13,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false) ;
-    } , 5000) ;
+    } , 3000) ;
 
     return () => clearTimeout(timer);
 
@@ -30,7 +30,7 @@ export default function Home() {
     <main className="relative bg-black-100 flex flex-col  mx-auto overflow-hidden">
       <div className="">
       <StarsCanvas />
-        <Navbar />
+        <Navbar/>
         <Hero />
       </div>
     </main>
