@@ -3,7 +3,6 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
-// import { any } from 'three/webgpu';
 
 const RobotModel = () => {
   const ref = useRef<THREE.Group>(null);
@@ -21,9 +20,7 @@ const RobotModel = () => {
 
       // Set up animations
       const actions: { [key: string]: THREE.AnimationAction } = {};
-
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      gltf.animations.forEach((clip) => {
+      gltf.animations.forEach((clip: THREE.AnimationClip) => {
         const action = newMixer.clipAction(clip);
         actions[clip.name] = action;
       });
@@ -40,7 +37,7 @@ const RobotModel = () => {
       playEmote(currentEmote);
 
       // Change emote every 2 seconds
-      const emotes = ['Wave' , 'Yes', 'No' , 'Punch' , 'ThumbsUp']; // List of emotes to cycle through
+      const emotes = ['Wave', 'Jump', 'Yes', 'No']; // List of emotes to cycle through
       let index = 0;
       const interval = setInterval(() => {
         index = (index + 1) % emotes.length;
@@ -64,12 +61,10 @@ const RobotModel = () => {
       scale={[1, 1, 1]} // Adjust the scale for a medium-sized model
     />
   ) : null;
-
-//   return model ? <primitive object={model} ref={ref} /> : null;
 };
 
 export const RobotViewer = () => (
-  <Canvas camera={{ position: [-5, 3, 10], fov: 55 }}>
+  <Canvas camera={{ position: [-5, 3, 10], fov: 45 }}>
     <ambientLight intensity={0.5} />
     <hemisphereLight intensity={3} />
     <directionalLight position={[0, 20, 10]} intensity={3} />
