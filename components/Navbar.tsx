@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <header className={`text-white-100 p-5  fixed w-full z-10 ${isScrolled || isMenuOpen? ' bg-transparent backdrop-blur-md shadow-lg z-50': 'bg-transparent '}`}>
-      <div className="container mx-auto flex justify-between items-center">
+      <div className="mx-auto flex justify-between items-center">
         {/* <img src="/logo.svg" className="text-2xl font-bold" /> */}
         <h1 className='text-purple font-extrabold text-2xl'>@AB.</h1>
         <nav className="hidden md:flex space-x-6 ">

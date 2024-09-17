@@ -4,7 +4,7 @@ interface TypeWriterProps {
   typingSpeed?:number ;
   delay?:number ;
 }
-const Typewriter : React.FC<TypeWriterProps> = ({ texts, typingSpeed = 100, delay = 1000 }) => {
+const Typewriter : React.FC<TypeWriterProps> = ({ texts, typingSpeed = 150, delay = 1000 }) => {
   const [currentText, setCurrentText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
@@ -27,7 +27,7 @@ const Typewriter : React.FC<TypeWriterProps> = ({ texts, typingSpeed = 100, dela
   }, [charIndex, currentIndex, texts, typingSpeed, delay]);
 
   return (
-    <h1 className="font-mono text-5xl border-r-2 border-black  overflow-hidden italic pt-2">
+    <h1 className="font-mono md:text-5xl  sm:text-3xl border-r-2 border-black  overflow-hidden italic pt-2">
       {currentText}
       <span className="animate-blink">|</span>
     </h1>

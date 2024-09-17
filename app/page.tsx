@@ -5,6 +5,8 @@ import Hero from '../components/Hero'
 import { useEffect, useState } from 'react';
 import Loading from '@/components/Loading';
 import StarsCanvas from '@/components/StartBackground';
+import BackgroundAnimation from '@/components/BackgroundAnimation';
+import { RobotViewer } from '@/components/RobotModel';
 // import { setTimeout } from 'timers/promises';
 export default function Home() {
 
@@ -27,13 +29,19 @@ export default function Home() {
     
     <>
     {/* <Navbar /> */}
-    <main className="relative bg-black-100 flex flex-col  mx-auto overflow-hidden">
+    <main className="relative bg-black-100 flex flex-col mx-auto overflow-hidden">
       <div className="">
+      <div className='hidden xl:flex  backdrop-blur-sm z-10 animation relative'>
+      <BackgroundAnimation  />
+      </div>
       <StarsCanvas />
         <Navbar/>
         <Hero />
       </div>
+
+      {/* <RobotViewer /> */}
     </main>
+    {/* <RobotViewer /> */}
 
     </>
   );
