@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import Loading from '@/components/Loading';
 import StarsCanvas from '@/components/StartBackground';
 import BackgroundAnimation from '@/components/BackgroundAnimation';
-import { RobotViewer } from '@/components/RobotModel';
+// import { RobotViewer } from '@/components/RobotModel';
 // import { setTimeout } from 'timers/promises';
 export default function Home() {
 
@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false) ;
-    } , 3000) ;
+    } , 6000) ;
 
     return () => clearTimeout(timer);
 

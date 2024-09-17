@@ -1,12 +1,12 @@
 // import { BackgroundBeamsWithCollision } from './ui/background-beams-with-collision'
 "use client"
 
-import Image from 'next/image'
+// import Image from 'next/image'
 import Typewriter from './Typewriter'
 import {Spotlight} from './ui/spotlight'
 // import { TextHoverEffect } from './ui/text-hover-effect'
 import { TextRevealCard } from './ui/text-reveal-card'
-import image from './Images/image.jpg'
+// import image from './Images/image.jpg'
 import { Button } from './ui/button'
 import Link from 'next/link'
 import { FaFacebookF, FaGithub, FaInstagram } from "react-icons/fa";
@@ -18,7 +18,7 @@ import {RobotViewer}  from '../components/RobotModel';
 const Hero = () => {
 
   const items = ["Programmer" , "Full Stack Developer"] ;
-  const item = ["Coding the Future of Digital Experiences"]
+  // const item = ["Coding the Future of Digital Experiences"]
   return (
     <div className="pb-20 pt-36">
       {/* <BackgroundAnimation /> */}

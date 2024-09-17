@@ -3,14 +3,14 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
-import { any } from 'three/webgpu';
+// import { any } from 'three/webgpu';
 
 const RobotModel = () => {
   const ref = useRef<THREE.Group>(null);
   const [model, setModel] = useState<THREE.Group | null>(null);
   const [mixer, setMixer] = useState<THREE.AnimationMixer | null>(null);
   const [currentEmote, setCurrentEmote] = useState<string>('Wave');
-  const clock = new THREE.Clock();
+//   const clock = new THREE.Clock();
 
   useEffect(() => {
     const loader = new GLTFLoader();
@@ -21,6 +21,8 @@ const RobotModel = () => {
 
       // Set up animations
       const actions: { [key: string]: THREE.AnimationAction } = {};
+
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       gltf.animations.forEach((clip) => {
         const action = newMixer.clipAction(clip);
         actions[clip.name] = action;
@@ -38,13 +40,13 @@ const RobotModel = () => {
       playEmote(currentEmote);
 
       // Change emote every 2 seconds
-      const emotes = ['Wave', 'Yes', 'No' , 'Punch' , 'ThumbsUp']; // List of emotes to cycle through
+      const emotes = ['Wave' , 'Yes', 'No' , 'Punch' , 'ThumbsUp']; // List of emotes to cycle through
       let index = 0;
       const interval = setInterval(() => {
         index = (index + 1) % emotes.length;
         setCurrentEmote(emotes[index]);
         playEmote(emotes[index]);
-      }, 3000);
+      }, 2000);
 
       // Clean up interval on component unmount
       return () => clearInterval(interval);
