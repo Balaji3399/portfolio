@@ -20,7 +20,7 @@ const Hero = () => {
   const items = ["Programmer" , "Full Stack Developer"] ;
   // const item = ["Coding the Future of Digital Experiences"]
   return (
-    <div className="pb-20 pt-36">
+    <div className=" pt-36">
       {/* <BackgroundAnimation /> */}
         <div className='flex gap-x-10 flex-col'>
             <Spotlight className='-top-40 -left-10 w-[10vw] md:-top-20 md:-left-32 h-screen '  fill='blue' />
@@ -101,7 +101,7 @@ const Hero = () => {
             </div>
 
                           {/* image */}
-            <div className='w-full flex flex-col items-center justify-center'>
+            <div className='w-full flex h-screen flex-col items-center justify-center'>
 
               <RobotViewer />
               {/* <div className=''>
@@ -111,7 +111,7 @@ const Hero = () => {
                     height={300}
                     alt='image'/>
                 </div> */}
-              </div>
+            </div>
           </div>
 
           {/* <div className='flex justify-center relative my-20 z-10'>

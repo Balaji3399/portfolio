@@ -4,7 +4,7 @@ import { RobotViewer } from './RobotModel'
 const Loading = () => {
   return (
 
-    <div className='h-screen w-full flex justify-center items-center bg-black-100'>
+    <div className='h-screen w-full flex flex-col justify-center items-center bg-black-100'>
 
         <RobotViewer />
 
