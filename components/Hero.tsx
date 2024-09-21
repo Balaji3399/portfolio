@@ -32,10 +32,10 @@ const Hero = () => {
           {/* Radial gradient for the container to give a faded look */}
           {/* <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div> */}
           <div className="h-screen w-full  dark:bg-black-100 bg-white  pt-20 text-center absolute  top-0 left-0">
-          <div className="hidden lg:flex w-full justify-center font-extrabold  italic  relative z-20 bg-clip-text text-transparent bg-gradient-to-r from-purple to-red-700  py-2">
+          <div className="hidden lg:flex w-full justify-center font-extrabold  italic  relative z-20 bg-clip-text text-transparent bg-gradient-to-r from-purple to-red-900   py-2">
             <TextRevealCard 
               revealText='Transforming Digital Visions into Groundbreaking Realities' 
-              className='-top-5 bg-transparent border-none text-start text-md w-3/4 font-extrabold' 
+              className='-top-5 bg-transparent border-none text-start text-md w-3/4 font-extrabold ' 
               text='Transforming Digital Visions into Groundbreaking Realities' 
             />
             {/* <Typewriter texts={item} /> */}
