@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { OrbitControls } from '@react-three/drei';
+// import { OrbitControls } from '@react-three/drei';
 import * as THREE from 'three';
 
 const RobotModel = () => {
@@ -84,7 +84,7 @@ export const RobotViewer = () => (
     <ambientLight intensity={0.5} />
     <hemisphereLight intensity={3} />
     <directionalLight position={[0, 20, 10]} intensity={3} />
-    <OrbitControls /> 
+    {/* <OrbitControls />  */}
     <RobotModel />
   </Canvas>
 );

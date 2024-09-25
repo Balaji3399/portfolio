@@ -101,7 +101,7 @@ const Hero = () => {
             </div>
 
                           {/* image */}
-            <div className='w-full flex h-screen flex-col items-center justify-center'>
+            <div className='w-full flex md:h-screen h-[40vh] pt-20 flex-col items-center justify-center'>
 
               <RobotViewer />
               {/* <div className=''>
