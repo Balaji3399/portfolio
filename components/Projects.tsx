@@ -5,6 +5,7 @@ import aiStartupLandingPage from "@/assets/Images/ai-startup-landing-page.png";
 import { Button } from "./ui/button";
 import Image from "next/image";
 import { ArrowUpRightIcon, CheckCircleIcon } from "lucide-react";
+import { PinContainer } from "./ui/3d-pin";
 // import grainImage from "../assets/Images/grain.jpg"
 const portfolioProjects = [
   {
@@ -97,9 +98,22 @@ export const ProjectsSection = () => {
                     </a>
                     </div>
                     <div className="relative">
-                    <Image src={project.image} alt={project.title}
+                    <PinContainer
+                    title="/ui.aceternity.com"
+                    href="https://twitter.com/mannupaaji"
+                  >
+                    <div className="flex basis-full flex-col p-4 tracking-tight sm:basis-1/2 w-[20rem] h-[20rem]  ">
+                      <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
+                        {project.title}
+                      </h3>
+                      <div className=" ">
+                      <Image src={project.image} alt={project.title}
                      className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
                      />
+                      </div>
+                    </div>
+                  </PinContainer>
+
                     </div>
                     </div>
                 </div>
