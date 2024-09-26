@@ -1,4 +1,4 @@
-import React  , {useRef , useState , Suspense}from 'react'
+import React  , {useRef , useState , Suspense, useEffect }from 'react'
 import {Canvas , useFrame} from "@react-three/fiber" 
 import {Points , PointMaterial } from "@react-three/drei"
 //@ts-expect-error noerror
@@ -13,7 +13,12 @@ const StartBackground = () => {
         ref.current.rotation.x -= delta/20 ;
         ref.current.rotation.y -= delta/15 ;
     })
+
+    
+
   return (
+
+
     <group rotation={[0 , 0 , Math.PI / 2]}>
         <Points
         ref = {ref}
@@ -34,14 +39,35 @@ const StartBackground = () => {
   )
 }
 
-const StarsCanvas = () => (
-    <div className='w-full h-auto fixed inset-0 z-10'>
-        <Canvas camera={{position : [0 , 0 , 1]}} >
-            <Suspense>
-                <StartBackground />
-            </Suspense>
-        </Canvas>
-    </div>
-)
-
+const StarsCanvas = () => {
+    const [cameraZ, setCameraZ] = useState(false); // Default z position is 1
+  
+    useEffect(() => {
+      const handleScroll = () => {
+        console.log(window.scrollY)
+        if (window.scrollY > 400) {
+          setCameraZ(true);
+          console.log()
+        } else {
+          setCameraZ(false);
+        }
+      };
+  
+      window.addEventListener('scroll', handleScroll);
+  
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
+    }, []);
+    
+    return (
+        <div className={`'w-full h-screen fixed inset-0 ${cameraZ ? 'z-0' : 'z-10'}`}>
+            <Canvas camera={{position : [0 , 0 , 1]}} >
+                <Suspense>
+                    <StartBackground />
+                </Suspense>
+            </Canvas>
+        </div>
+    )
+}
 export default StarsCanvas ;

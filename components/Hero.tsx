@@ -24,7 +24,7 @@ const Hero = () => {
       {/* <BackgroundAnimation /> */}
         <div className='flex gap-x-10 flex-col'>
             <Spotlight className='-top-40 -left-10 w-[10vw] md:-top-20 md:-left-32 h-screen '  fill='blue' />
-            <Spotlight className='left-full -top-32 h-[400vh] w-[50vw]' fill='purple'/>
+            {/* <Spotlight className='left-full -top-32 h-[400vh] w-[50vw]' fill='purple'/> */}
             <Spotlight className='-left-32 top-28 h-[300vh] w-96'  fill='purple'/>
         </div>
 

@@ -7,6 +7,7 @@ import Loading from '@/components/Loading';
 import StarsCanvas from '@/components/StartBackground';
 import BackgroundAnimation from '@/components/BackgroundAnimation';
 import { ProjectsSection } from '@/components/Projects';
+import Tape from '@/components/Tape';
 // import { RobotViewer } from '@/components/RobotModel';
 // import { setTimeout } from 'timers/promises';
 export default function Home() {
@@ -30,7 +31,7 @@ export default function Home() {
     
     <>
     {/* <Navbar /> */}
-    <main className="relative bg-black-100 flex flex-col  overflow-hidden">
+    <main className="relative bg-black-100 flex flex-col mx-auto  ">
       <div className="">
       <div className='hidden xl:flex  backdrop-blur-sm z-10 animation relative'>
       <BackgroundAnimation  />
@@ -38,8 +39,10 @@ export default function Home() {
       <StarsCanvas />
         <Navbar/>
         <Hero />
+        <ProjectsSection />
+        <Tape />
       </div>
-      <ProjectsSection />
+
       {/* <RobotViewer /> */}
     </main>
     {/* <RobotViewer /> */}

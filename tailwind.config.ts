@@ -8,6 +8,7 @@ import svgToTinyDataUri from "mini-svg-data-uri";
 
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette"
 
+
 const config = {
   darkMode: ["class"],
   content: [
@@ -84,6 +85,14 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        "move-left" : {
+          '0%':{
+            transform: 'translateX(0%)'
+          },
+          '100%':{
+            transform : 'translateX(-50%)'
+          }
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -170,6 +179,7 @@ const config = {
         fifth: "moveInCircle 20s ease infinite",
         scroll:
           "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
+        "move-left":'move-left 1s linear infinite'
       },
     },
   },

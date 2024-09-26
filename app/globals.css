@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -86,9 +87,15 @@
   .black-gradient {
     background: linear-gradient(90deg, #161a31 0%, #06091f 100%);
   }
+
+  .container {
+    @apply lg:max-w-5xl ;
+  }
 }
 
-
+body{
+  overflow-x: hidden;
+}
 ::-webkit-scrollbar {
   width: 8px;
 }
