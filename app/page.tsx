@@ -8,6 +8,7 @@ import StarsCanvas from '@/components/StartBackground';
 import BackgroundAnimation from '@/components/BackgroundAnimation';
 import { ProjectsSection } from '@/components/Projects';
 import Tape from '@/components/Tape';
+import About from '@/components/About';
 
 // import { RobotViewer } from '@/components/RobotModel';
 // import { setTimeout } from 'timers/promises';
@@ -42,6 +43,7 @@ export default function Home() {
         <Hero />
         <ProjectsSection />
         <Tape />
+        {/* <About /> */}
       </div>
 
       {/* <RobotViewer /> */}
