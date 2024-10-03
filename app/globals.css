@@ -128,7 +128,7 @@ body{
   }
 }
 
-@media (min-width : 786px) {
+@media (min-width : 1026px) {
   .hero{
     display: flex;
     flex-direction: row;

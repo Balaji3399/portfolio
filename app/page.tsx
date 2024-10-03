@@ -8,7 +8,7 @@ import StarsCanvas from '@/components/StartBackground';
 import BackgroundAnimation from '@/components/BackgroundAnimation';
 import { ProjectsSection } from '@/components/Projects';
 import Tape from '@/components/Tape';
-// import About from '@/components/About';
+import About from '@/components/About';
 
 // import { RobotViewer } from '@/components/RobotModel';
 // import { setTimeout } from 'timers/promises';
@@ -19,7 +19,7 @@ export default function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false) ;
-    } , 6000) ;
+    } , 5000) ;
 
     return () => clearTimeout(timer);
 
@@ -33,9 +33,9 @@ export default function Home() {
     
     <>
     {/* <Navbar /> */}
-    <main className="relative bg-black-100 flex flex-col mx-auto  ">
+    <main className=" bg-black-100 flex flex-col mx-auto  ">
       <div className="">
-      <div className='hidden xl:flex  backdrop-blur-sm z-10 animation relative'>
+      <div className='hidden xl:flex  backdrop-blur-sm z-10 animation '>
       <BackgroundAnimation  />
       </div>
       <StarsCanvas />
@@ -43,7 +43,7 @@ export default function Home() {
         <Hero />
         <ProjectsSection />
         <Tape />
-        {/* <About /> */}
+        <About />
       </div>
 
       {/* <RobotViewer /> */}

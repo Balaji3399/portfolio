@@ -74,7 +74,7 @@ const RobotModel = () => {
     <primitive 
       object={model} 
       ref={ref} 
-      scale={[1, 1, 1]} // Adjust the scale for a medium-sized model
+      scale={[1, 1, 1]} 
     />
   ) : null;
 };

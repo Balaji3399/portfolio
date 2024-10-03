@@ -1,48 +1,47 @@
-import darkSaasLandingPage from "@/assets/Images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/Images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/Images/ai-startup-landing-page.png";
-// import { li } from "framer-motion/client";
+
 import { Button } from "./ui/button";
 import Image from "next/image";
 import { ArrowUpRightIcon, CheckCircleIcon } from "lucide-react";
 import { PinContainer } from "./ui/3d-pin";
-// import grainImage from "../assets/Images/grain.jpg"
+import desktop from "../assets/Images/desktop1.jpg" ;
+import chronicle from "../assets/Images/chronicle.png" ;
+import AcademyWeb from "../assets/Images/school-website.png" ;
 const portfolioProjects = [
   {
-    company: "",
+    company: "Ai Trip Planner",
     year: "2024",
     title: "AI Trip Planner",
     results: [
-      { title: "Enhanced user experience by 40%" },
+      { title: "Enhanced user experience " },
       { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Responsive Site" },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://ai-trip-planner-fawn.vercel.app/",
+    image: desktop,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
-    results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
-    ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
-  },
-  {
-    company: "Quantum Dynamics",
+    company: "Game Reviews",
     year: "2023",
-    title: "AI Startup Landing Page",
+    title: "Game Reviews",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Dynamic game review website" },
+      { title: "Responsive design" },
+      { title: "Provide real-time data on games." },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://github.com/Balaji3399/acm-web-task-critics-chronicle--task4",
+    image: chronicle,
+  },
+  {
+    company: "Quest Academy",
+    year: "2023",
+    title: "Quest Academy",
+    results: [
+      { title: "Designed a comprehensive Academy website" },
+      { title: "Responsive Site" },
+      { title: "offering students access to syllabus details" },
+    ],
+    link: "",
+    image: AcademyWeb,
   },
 ];
 
@@ -101,8 +100,8 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
-                    <Button className="inline-flex md:w-auto px-6 items-center justify-center gap-2 mt-8 h-12 w-full rounded-xl font-semibold">
+                  <a href={project.link} target="_blank">
+                    <Button className="inline-flex md:w-auto px-6 items-center justify-center gap-2 mt-8 h-12 w-full rounded-xl font-semibold" >
                       <span>Live Site</span>
                       <ArrowUpRightIcon className="size-4" />
                     </Button>
@@ -110,8 +109,8 @@ export const ProjectsSection = () => {
                 </div>
                 <div className="relative">
                   <PinContainer
-                    title="/ui.aceternity.com"
-                    href="https://twitter.com/mannupaaji"
+                    title={project.title}
+                    href={project.link}
                   >
                     <div className="flex basis-full flex-col p-4 tracking-tight sm:basis-1/2 w-[20rem] h-[20rem]  ">
                       <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
