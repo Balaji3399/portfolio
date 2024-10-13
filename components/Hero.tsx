@@ -7,12 +7,13 @@ import {Spotlight} from './ui/spotlight'
 // import { TextHoverEffect } from './ui/text-hover-effect'
 import { TextRevealCard } from './ui/text-reveal-card'
 // import image from './Images/image.jpg'
-import { Button } from './ui/button'
-import Link from 'next/link'
-import { FaFacebookF, FaGithub, FaInstagram } from "react-icons/fa";
-import { FaSquareXTwitter } from 'react-icons/fa6'
+// import { Button } from './ui/button'
+// import Link from 'next/link'
+// import { FaFacebookF, FaGithub, FaInstagram } from "react-icons/fa";
+// import { FaSquareXTwitter } from 'react-icons/fa6'
 // import BackgroundAnimation from './BackgroundAnimation'
 import {RobotViewer}  from '../components/RobotModel';
+import Social from './Social'
 
 
 const Hero = () => {
@@ -57,7 +58,6 @@ const Hero = () => {
                       <Typewriter texts={items} />
                     </span>
                   </h1>
-                  
                   <div className='py-5'>
                     <p className='w-full sm:text-md  md:text-lg max-w-lg leading-7 flex justify-center text-justify font-medium'>
                       Creative web developer dedicated to transforming complex problems into elegant, efficient digital solutions.
@@ -71,27 +71,10 @@ const Hero = () => {
                           Resume
                         </span>
                       </button>
-                      <div className='social_icons flex justify-center items-center w-1/2 gap-5'>
-                        <Link href={"/"} className='link'>
-                          <Button className='hover:rounded-3xl transition-all hover:bg-gradient-to-b from-purple to-red-600'>
-                            <FaInstagram className='text-2xl rounded-full text-red-950 hover:text-white-100' />
-                          </Button>
-                        </Link>
-                        <Link href={"/"} className='link'>
-                          <Button className='hover:rounded-3xl transition-all hover:bg-gradient-to-b from-purple to-red-600'>
-                            <FaSquareXTwitter className='text-2xl rounded-full text-red-950 hover:text-white-100'/>
-                          </Button>
-                        </Link>
-                        <Link href={"/"} className='link'>
-                          <Button className='hover:rounded-3xl transition-all hover:bg-gradient-to-b from-purple to-red-600'>
-                            <FaFacebookF className='text-2xl rounded-full text-red-950 hover:text-white-100'/>
-                          </Button>
-                        </Link>
-                        <Link href={"/"} className='link'>
-                          <Button className='hover:rounded-3xl transition-all hover:bg-gradient-to-b from-purple to-red-600'>
-                            <FaGithub className='text-2xl rounded-full text-red-950 hover:text-white-100'/>
-                          </Button>
-                        </Link>
+                      <div>
+                        <Social containerStyles="flex gap-6" iconStyles="w-10 h-10 border border-accent rounded-full
+                        flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary
+                        hover:transition-all duration-500" />
                       </div>
                   </div>
                 </div>

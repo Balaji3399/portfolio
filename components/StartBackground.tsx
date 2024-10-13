@@ -47,7 +47,6 @@ const StarsCanvas = () => {
         console.log(window.scrollY)
         if (window.scrollY > 400) {
           setCameraZ(true);
-          console.log()
         } else {
           setCameraZ(false);
         }
