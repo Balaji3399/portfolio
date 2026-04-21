@@ -9,7 +9,7 @@ const projects = [
     desc: "Online menu, table booking & customer engagement system.",
     tag: "Local Business",
     image: "/restaurant.png",
-    link: "#"
+    link: "https://balaji3399.github.io/RestaurantBussiness/"
   },
   {
     title: "Portfolio Website",
@@ -23,7 +23,7 @@ const projects = [
     desc: "A Complete Website for School with faculty , chairs , course and Syllabus Details.",
     tag: "Education",
     image: "/school.png",
-    link: "#"
+    link: "https://balaji3399.github.io/school-website/"
   },
   {
     title: "Portfolio Website",
